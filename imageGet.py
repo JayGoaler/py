@@ -2,7 +2,7 @@ import requests
 import cv2
 import os
 
-imagePath = "D:/Downloads/images/"
+imagePath = "images/"
 haarcascade_frontalface_default_path = "lib/haarcascade_frontalface_default.xml"
 lbpcascade_animeface_path = "lib/lbpcascade_animeface.xml"
 
@@ -115,5 +115,5 @@ def face_detect(file_name):
 
 
 if __name__ == '__main__':
-    # get_image_by_page(5)
-    print(face_detect(imagePath+'16.jpg'))
+    get_image_by_page(2)
+    # print(face_detect(imagePath+'16.jpg'))
