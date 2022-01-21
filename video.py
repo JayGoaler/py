@@ -29,7 +29,7 @@ def video_show(video):
         if cv2.waitKey(1) & 0xff == ord("c"):
             choose_video = False
             cv2.destroyWindow("choose_video")
-        # 如果按下P键，则退出视频
+        # 如果按下Q键，则退出视频
         if cv2.waitKey(1) & 0xff == ord("q"):
             break
     video.release()
