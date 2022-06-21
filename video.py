@@ -45,4 +45,4 @@ def do_ocr(pic):
 
 if __name__ == '__main__':
     # cv2.VideoCapture传入0表示打开摄像头
-    video_show(cv2.VideoCapture(0))
+    video_show(cv2.VideoCapture(0, cv2.CAP_DSHOW))
