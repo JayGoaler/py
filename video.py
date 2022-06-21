@@ -14,11 +14,11 @@ def video_show(video):
             break
         # 如果摄像头正常开启，则输出每帧图像
         cv2.imshow("Video_show", frame)
-        # 监控是否按下 Q 键
+        # 监控是否按下 S 键
         if cv2.waitKey(1) & 0xff == ord("s"):
             select_data = cv2.selectROI("Video_show", frame)
             choose_video = True
-        # 如果Q键被按下，则切换显示框选区域
+        # 如果S键被按下，则切换显示框选区域
         if choose_video:
             # 获取选择框内的图像
             choose_data = frame[select_data[1]:select_data[1] + select_data[3],
@@ -29,7 +29,7 @@ def video_show(video):
         if cv2.waitKey(1) & 0xff == ord("c"):
             choose_video = False
             cv2.destroyWindow("choose_video")
-        # 如果按下P键，则退出视频
+        # 如果按下Q键，则退出视频
         if cv2.waitKey(1) & 0xff == ord("q"):
             break
     video.release()
